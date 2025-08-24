@@ -1,6 +1,4 @@
-const cloudinary = require("cloudinary").v2;
-require("../public/js/config");
-const apiSecret = cloudinary.config().api_secret;
+const cloudinary = require("../config/cloudinary");
 
 // Server-side function used to sign an upload with a couple of
 // example eager transformations included in the request.
@@ -10,9 +8,9 @@ const signuploadform = () => {
   const signature = cloudinary.utils.api_sign_request(
     {
       timestamp: timestamp,
-      folder: "signed_upload_demo_form",
+      folder: "test_uploads",
     },
-    apiSecret
+    process.env.CLOUDINARY_API_SECRET
   );
 
   return { timestamp, signature };
