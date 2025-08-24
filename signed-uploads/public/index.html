@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Signed uploading</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>404 - Nothing to see here...</title>
+  <style>
+    body {
+      min-height: 100vh;
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .error-code {
+      font-size: 8rem;
+      font-weight: 900;
+      color: #ec4899;
+      text-shadow: 0 4px 32px #ec4899, 0 2px 8px #fff2;
+      margin-bottom: 1rem;
+    }
+    .subtitle {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #f472b6;
+      animation: pulse 1.5s infinite;
+      margin-bottom: 1rem;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .desc {
+      font-size: 1.1rem;
+      color: #a1a1aa;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+    }
+    .emoji {
+      font-size: 3rem;
+      animation: bounce 1s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
 </head>
-
 <body>
-  <h2>Demonstrating Signed Uploads to Cloudinary</h2>
-  <p>
-  <b>Important:</b> Before you start, ensure you've configured your Cloudinary account details in <b>signed-uploads/public/js/config.js</b>.
-  </p>
-  <p>
-  Choose the type of upload you want to try:
-  <ul>
-    <li><a href="uploadwidget.html">Upload Files Using the Upload Widget</a></li><br>
-    <li><a href="uploadform.html">Upload Files Using a Form</a></li>
-  </ul>
-  </p>
-
-</body>
-
-</html>
+  <div class="error-code">404</div>
+  <div class="subtitle">🚧 Nothing to see here...</div>
+  <div class="desc">
+    You’ve reached the end of the internet. This page? Useless. Kinda sus that you even found it. 🧐
+    <br>
+    Maybe go outside? Touch grass? 🌱
+  </div>
+  <div class=
