@@ -1,9 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const signature = require("../modules/signuploadform");
-require("../public/js/config");
-
-const cloudinary = require("cloudinary").v2;
 
 // using this API should require authentication
 router.get("/", function (req, res, next) {
