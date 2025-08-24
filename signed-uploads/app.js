@@ -39,6 +39,10 @@ app.use(function (err, req, res, next) {
 // module.exports = app
 const port = process.env.PORT || 3000;
 
-app.listen(port, () =>
-  console.info(`Server is up on http://localhost:${port}`)
-);
+// Remove or comment out app.listen
+// app.listen(port, () =>
+//   console.info(`Server is up on http://localhost:${port}`)
+// );
+
+// Export the app for Vercel
+module.exports = app;

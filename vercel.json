@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "signed-uploads/app.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "signed-uploads/app.js" }
+  ]
+}
