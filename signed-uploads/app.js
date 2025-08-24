@@ -1,10 +1,26 @@
 const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
+const cors = require("cors");
 
 const signuploadformRouter = require("./routes/signuploadform");
 
 const app = express();
+
+// Allow any origin that starts with "https://cool-react"
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || origin.startsWith("https://cool-react")) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
