@@ -11,7 +11,11 @@ const app = express();
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (!origin || origin.startsWith("https://cool-react")) {
+      if (
+        !origin ||
+        origin.startsWith("https://cool-react") ||
+        origin.startsWith("http://localhost")
+      ) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
