@@ -4,6 +4,7 @@ const path = require("path");
 const cors = require("cors");
 
 const signuploadformRouter = require("./routes/signuploadform");
+const signdestroyformRouter = require("./routes/signdestroyform");
 
 const app = express();
 
@@ -31,6 +32,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // upload signing API
 app.use("/api/signuploadform", signuploadformRouter);
+
+// Destroy signing API
+app.use("/api/signdestroyform", signdestroyformRouter);
 
 // static files
 app.use(express.static("public"));
